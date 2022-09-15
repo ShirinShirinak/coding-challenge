@@ -4,7 +4,8 @@
   "description": "Order Fulfilment is a simple script in Javascript used to initiate an order run, delivering orders according to pending orders and inventory availability.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
