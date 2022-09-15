@@ -47,5 +47,7 @@ npm test
 ### utils.js
 - checkStockQuantities(params: order, products)
     - Check stock availability for order fulfilment
-
+- updateData(params: canBeFulfilled, order, products)
+    - Update the order status to either Fulfilled or Unfulfillable
+    - Update the stock availability on order fulfilment
 

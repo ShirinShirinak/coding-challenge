@@ -1,3 +1,4 @@
+const { checkStockQuantities, updateData } = require("./utils");
 const data = require("../data.json");
 
 class InitiateOrderRun {
@@ -15,6 +16,9 @@ class InitiateOrderRun {
         const unfulfilledOrders = filteredData.filter((order) => {
             // Checking to see if there is enough in stock to fulfill the order
             const canBeFulfilled = checkStockQuantities(order, products);
+
+            // Update the stock quantity and the status of the order
+            updateData(canBeFulfilled, order, products);
         
             return !canBeFulfilled;
         });
