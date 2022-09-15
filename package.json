@@ -1,0 +1,19 @@
+{
+  "name": "coding-challenge",
+  "version": "1.0.0",
+  "description": "Order Fulfilment is a simple script in Javascript used to initiate an order run, delivering orders according to pending orders and inventory availability.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShirinShirinak/coding-challenge.git"
+  },
+  "author": "Shirin Heidari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShirinShirinak/coding-challenge/issues"
+  },
+  "homepage": "https://github.com/ShirinShirinak/coding-challenge#readme"
+}
