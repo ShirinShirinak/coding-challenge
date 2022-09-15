@@ -20,4 +20,7 @@ exports.updateData = (canBeFulfilled, order, products) => {
     }
   };
 
-function generateNewPurchaseOrder() {}
+// This function generates a new purchase order when the quantityOnHand is less than reorderThreshold for a product
+exports.generateNewPurchaseOrder = (productId) => {
+    // Assumption: Code already exists to generate a new purchase order
+  };

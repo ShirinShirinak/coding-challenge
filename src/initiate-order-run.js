@@ -1,4 +1,4 @@
-const { checkStockQuantities, updateData } = require("./utils");
+const { checkStockQuantities, updateData, generateNewPurchaseOrder } = require("./utils");
 const data = require("../data.json");
 
 class InitiateOrderRun {
@@ -21,6 +21,17 @@ class InitiateOrderRun {
             updateData(canBeFulfilled, order, products);
         
             return !canBeFulfilled;
+        });
+
+        /* If the quantityOnHand is less than reorderThreshold then a new purchase order is generated. 
+        Assumptions: 
+        The code for new purchase order already exists.
+        This is ran only once, every time the order run is initiated so that the new purchase order is not generated multiple times. Alternatively,
+        a re-order flag can be added */
+        products.forEach((product) => {
+            if (product.quantityOnHand < product.reorderThreshold) {
+            generateNewPurchaseOrder(product.productId);
+            }
         });
 
         // Only return the order IDs of the unfulfilled orders
